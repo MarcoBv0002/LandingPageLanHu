@@ -69,3 +69,9 @@ a {
     border-width: 16px;
   }
 }
+
+@media (min-width: 1536px) {
+  .container-shell {
+    width: min(1500px, calc(100% - 96px));
+  }
+}

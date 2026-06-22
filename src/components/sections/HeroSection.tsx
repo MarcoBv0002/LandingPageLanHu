@@ -22,24 +22,24 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_39%,rgba(63,105,177,0.28),transparent_25%),radial-gradient(circle_at_82%_62%,rgba(236,168,60,0.12),transparent_23%),linear-gradient(90deg,rgba(2,11,34,0.82),transparent_24%,transparent_74%,rgba(2,11,34,0.82))]" />
       <div className="absolute left-1/2 top-[42%] h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[rgba(236,168,60,0.25)] opacity-75 shadow-[0_0_0_22px_rgba(63,105,177,0.08),0_0_0_48px_rgba(255,255,255,0.035)] md:top-1/2 md:h-[880px] md:w-[880px] md:-translate-y-[42%] md:shadow-[0_0_0_34px_rgba(63,105,177,0.08),0_0_0_74px_rgba(255,255,255,0.035)]" />
 
-      <Container className="relative z-10 grid w-full grid-rows-[auto_1fr_auto] pb-11 pt-[104px] md:pb-14 md:pt-28">
+      <Container className="relative z-10 grid w-full grid-rows-[auto_1fr_auto] pb-11 pt-[104px] md:pb-14 md:pt-28 xl:pb-[clamp(7.5rem,14vh,10rem)]">
         <div aria-hidden="true" />
 
         <div className="grid min-h-[300px] place-items-center pt-5 text-center md:min-h-[330px] md:pt-7">
-          <div className="hero-logo-mark relative grid h-[178px] w-[178px] place-items-center rounded-full bg-white/95 shadow-hero ring-[10px] ring-white/10 md:h-[228px] md:w-[228px] md:ring-[14px]">
+          <div className="hero-logo-mark relative grid h-[178px] w-[178px] place-items-center rounded-full bg-white/95 shadow-hero ring-[10px] ring-white/10 md:h-[228px] md:w-[228px] md:ring-[14px] 2xl:h-[250px] 2xl:w-[250px]">
             <Image
               src="/images/tigre-azul/tigre-azul-logo.png"
               alt="Logo Tigre Azul"
               width={198}
               height={198}
               priority
-              sizes="(min-width: 768px) 198px, 154px"
-              className="relative z-10 h-[154px] w-[154px] rounded-full object-cover md:h-[198px] md:w-[198px]"
+              sizes="(min-width: 1536px) 218px, (min-width: 768px) 198px, 154px"
+              className="relative z-10 h-[154px] w-[154px] rounded-full object-cover md:h-[198px] md:w-[198px] 2xl:h-[218px] 2xl:w-[218px]"
             />
           </div>
         </div>
 
-        <div className="grid items-end gap-6 lg:grid-cols-[minmax(0,700px)_minmax(420px,1fr)] lg:gap-8">
+        <div className="grid items-end gap-6 lg:grid-cols-[minmax(0,700px)_minmax(420px,1fr)] lg:gap-8 2xl:grid-cols-[minmax(0,820px)_minmax(420px,1fr)]">
           <div>
             <div className="inline-flex items-center gap-2.5 rounded-full border border-brand-yellow/35 bg-brand-yellow/15 px-3 py-2 text-[11px] font-black uppercase tracking-[0.04em] text-brand-yellow md:px-3.5 md:py-2.5 md:text-[13px] md:tracking-[0.08em]">
               <span className="h-2 w-2 rounded-full bg-brand-yellow shadow-[0_0_0_5px_rgba(236,168,60,0.16)]" />
@@ -47,10 +47,17 @@ export function HeroSection() {
             </div>
             <h1
               id="hero-title"
-              className="mt-5 max-w-4xl text-[48px] font-black leading-[0.94] tracking-[-0.055em] text-white md:text-[72px] md:leading-[0.91] md:tracking-[-0.065em]"
+              className="mt-5 max-w-4xl text-[46px] font-black leading-[0.94] tracking-[-0.045em] text-white sm:text-[48px] sm:tracking-[-0.055em] md:text-[72px] md:leading-[0.91] md:tracking-[-0.065em]"
             >
-              La actitud se entrena.{" "}
-              <span className="text-brand-yellow">El carácter se forja.</span>
+              <span className="block">La actitud se entrena.</span>
+              <span className="block text-brand-yellow">
+                <span className="sm:hidden">
+                  El carácter se
+                  <br />
+                  forja.
+                </span>
+                <span className="hidden sm:inline">El carácter se forja.</span>
+              </span>
             </h1>
           </div>
 
