@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer
       id="contacto"
-      className="border-t border-white/10 bg-brand-950 py-9 text-sm text-[var(--muted)]"
+      className="scroll-mt-[104px] border-t border-white/10 bg-brand-950 py-9 text-sm text-[var(--muted)] lg:scroll-mt-[150px]"
     >
       <Container className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
         <div>

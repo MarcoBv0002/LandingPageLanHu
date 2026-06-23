@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Tigre Azul | Academia de artes marciales",
   description:
     "Academia Tigre Azul: boxeo, MMA, BJJ, Sanda y preparación física para alumnos nuevos, familias y competidores.",
+  icons: {
+    icon: "/images/tigre-azul/tigre-azul-logo.png",
+    apple: "/images/tigre-azul/tigre-azul-logo.png"
+  },
   openGraph: {
     title: "Tigre Azul | Academia de artes marciales",
     description:

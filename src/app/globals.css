@@ -45,18 +45,70 @@ a {
   background: rgba(236, 168, 60, 0.34);
 }
 
+.nav-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .container-shell {
   width: min(1188px, calc(100% - 28px));
 }
 
-.hero-logo-mark::before {
+.hero-orbit {
+  border: 2px solid rgba(0, 132, 255, 0.28);
+  box-shadow:
+    0 0 0 48px rgba(0, 132, 255, 0.055),
+    0 0 0 88px rgba(255, 255, 255, 0.03),
+    inset 0 0 90px rgba(0, 132, 255, 0.12);
+}
+
+.hero-orbit::before,
+.hero-orbit::after {
   position: absolute;
-  inset: -46px;
+  inset: 8%;
   content: "";
-  border: 11px solid rgba(63, 105, 177, 0.15);
-  border-left-color: rgba(236, 168, 60, 0.32);
-  border-radius: 9999px;
-  transform: rotate(-22deg);
+  border-radius: inherit;
+  border: 16px solid rgba(0, 132, 255, 0.23);
+  border-left-color: rgba(236, 168, 60, 0.62);
+  border-bottom-color: transparent;
+  transform: rotate(-18deg);
+}
+
+.hero-orbit::after {
+  inset: 17%;
+  border-width: 2px;
+  border-left-color: rgba(255, 255, 255, 0.12);
+  border-right-color: rgba(0, 132, 255, 0.75);
+  border-bottom-color: rgba(0, 132, 255, 0.22);
+  transform: rotate(22deg);
+}
+
+.hero-blue-wash {
+  background:
+    radial-gradient(circle at 58% 45%, rgba(0, 132, 255, 0.44), transparent 34%),
+    radial-gradient(circle at 74% 62%, rgba(0, 132, 255, 0.24), transparent 42%);
+  filter: blur(3px);
+}
+
+.hero-scroll-dot {
+  animation: hero-scroll-dot 1.75s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-dot {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(14px);
+    opacity: 0.45;
+  }
 }
 
 @media (min-width: 768px) {
@@ -64,14 +116,39 @@ a {
     width: min(1188px, calc(100% - 48px));
   }
 
-  .hero-logo-mark::before {
-    inset: -78px;
-    border-width: 16px;
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  .container-shell {
+    width: min(760px, calc(100% - 96px));
   }
 }
 
 @media (min-width: 1536px) {
   .container-shell {
     width: min(1500px, calc(100% - 96px));
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-shell.container-shell {
+    width: min(1360px, calc(100% - 72px));
+  }
+}
+
+@media (min-width: 1536px) {
+  .header-shell.container-shell {
+    width: min(1760px, calc(100% - 96px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
