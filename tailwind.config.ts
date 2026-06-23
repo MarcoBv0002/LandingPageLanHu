@@ -17,6 +17,11 @@ const config: Config = {
           700: "var(--blue-700)",
           logo: "var(--blue-logo)",
           yellow: "var(--yellow)"
+        },
+        afc: {
+          red: "var(--afc-red)",
+          graphite: "var(--afc-graphite)",
+          metal: "var(--afc-metal)"
         }
       },
       boxShadow: {

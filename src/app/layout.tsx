@@ -5,18 +5,21 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Tigre Azul | Academia de artes marciales",
+  title: {
+    default: "AFC Peru | Apex Fighting Championship",
+    template: "%s"
+  },
   description:
-    "Academia Tigre Azul: boxeo, MMA, BJJ, Sanda y preparación física para alumnos nuevos, familias y competidores.",
+    "AFC Peru: arena, ranking y competencias oficiales para deportes de combate.",
   icons: {
-    icon: "/images/tigre-azul/tigre-azul-logo.png",
-    apple: "/images/tigre-azul/tigre-azul-logo.png"
+    icon: "/images/afc/afc-logo-arena.png",
+    apple: "/images/afc/afc-logo-arena.png"
   },
   openGraph: {
-    title: "Tigre Azul | Academia de artes marciales",
+    title: "AFC Peru | Apex Fighting Championship",
     description:
-      "Disciplina, respeto, técnica y preparación física en una academia de deportes de combate.",
-    images: ["/images/tigre-azul/tigre-azul-logo.png"]
+      "Arena, ranking y competencias oficiales para MMA, boxeo, sanda y jiu-jitsu en jaula.",
+    images: ["/images/afc/afc-logo-arena.png"]
   }
 };
 

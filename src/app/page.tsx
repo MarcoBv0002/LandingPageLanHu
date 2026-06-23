@@ -1,12 +1,18 @@
-import { AppShell } from "@/components/layout/AppShell";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { SectionAnchorTargets } from "@/components/sections/SectionAnchorTargets";
+import type { Metadata } from "next";
+import { AfcLandingPage } from "@/components/afc/AfcLandingPage";
+
+export const metadata: Metadata = {
+  title: "AFC Peru | Apex Fighting Championship",
+  description:
+    "Landing oficial AFC Peru con clasificaciones demo, categorias, fechas e informacion de inscripcion para competencias de combate.",
+  openGraph: {
+    title: "AFC Peru | Apex Fighting Championship",
+    description:
+      "Arena, ranking y competencias oficiales para MMA, boxeo, sanda y jiu-jitsu en jaula.",
+    images: ["/images/afc/afc-logo-arena.png"]
+  }
+};
 
 export default function Home() {
-  return (
-    <AppShell>
-      <HeroSection />
-      <SectionAnchorTargets />
-    </AppShell>
-  );
+  return <AfcLandingPage />;
 }
