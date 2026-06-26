@@ -57,6 +57,66 @@ a {
   display: none;
 }
 
+.desktop-nav-hotspot {
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.desktop-nav-hotspot::before,
+.desktop-nav-hotspot::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.desktop-nav-hotspot::before {
+  inset: 10% -7%;
+  border: 1px solid rgba(236, 168, 60, 0.66);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(236, 168, 60, 0.2), rgba(236, 168, 60, 0.09)),
+    rgba(2, 8, 19, 0.3);
+  box-shadow:
+    inset 0 0 18px rgba(255, 255, 255, 0.08),
+    0 0 24px rgba(236, 168, 60, 0.24);
+}
+
+.desktop-nav-hotspot::after {
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--yellow);
+  box-shadow: 0 0 16px rgba(236, 168, 60, 0.82);
+  transform: scaleX(0.55);
+}
+
+.desktop-nav-hotspot:hover,
+.desktop-nav-hotspot:focus-visible,
+.desktop-nav-hotspot-active {
+  background-color: rgba(236, 168, 60, 0.08);
+  box-shadow: 0 0 28px rgba(0, 132, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.desktop-nav-hotspot:hover::before,
+.desktop-nav-hotspot:hover::after,
+.desktop-nav-hotspot:focus-visible::before,
+.desktop-nav-hotspot:focus-visible::after,
+.desktop-nav-hotspot-active::before,
+.desktop-nav-hotspot-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
 .container-shell {
   width: min(1188px, calc(100% - 28px));
 }

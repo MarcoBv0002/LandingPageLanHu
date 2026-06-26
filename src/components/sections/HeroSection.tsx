@@ -6,7 +6,12 @@ import { heroContent, navItems, whatsappUrl } from "@/lib/site";
 
 const desktopNavHotspots = [
   { href: "#inicio", label: "Inicio", left: "3.2%", width: "4.9%" },
-  { href: "#quienes-somos", label: "Quiénes somos", left: "9.6%", width: "9.3%" },
+  {
+    href: "#quienes-somos",
+    label: "Quiénes somos",
+    left: "9.6%",
+    width: "9.3%"
+  },
   { href: "#disciplinas", label: "Disciplinas", left: "19.0%", width: "8.3%" },
   { href: "#profesores", label: "Profesores", left: "27.2%", width: "7.9%" },
   { href: "#sedes", label: "Sedes", left: "35.2%", width: "5.0%" },
@@ -23,11 +28,12 @@ const desktopNavHotspots = [
 
 export function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hoveredNavItem, setHoveredNavItem] = useState<string | null>(null);
 
   return (
     <section
       id="inicio"
-      className="relative isolate h-[100svh] min-h-[640px] overflow-hidden bg-[#020813] text-white max-lg:min-h-[720px]"
+      className="relative isolate h-[100svh] overflow-hidden bg-[#020813] text-white lg:min-h-[640px]"
       aria-labelledby="hero-title"
     >
       <Image
@@ -62,7 +68,22 @@ export function HeroSection() {
             key={item.href}
             href={item.href}
             aria-label={item.label}
-            className="absolute top-[9.7%] z-20 h-[4.7%] rounded-sm outline-none transition focus-visible:bg-brand-yellow/25 focus-visible:ring-2 focus-visible:ring-brand-yellow"
+            data-nav-hotspot={item.href}
+            onPointerEnter={() => setHoveredNavItem(item.href)}
+            onPointerLeave={() =>
+              setHoveredNavItem((current) =>
+                current === item.href ? null : current
+              )
+            }
+            onFocus={() => setHoveredNavItem(item.href)}
+            onBlur={() =>
+              setHoveredNavItem((current) =>
+                current === item.href ? null : current
+              )
+            }
+            className={`desktop-nav-hotspot absolute top-[9.35%] z-20 h-[5.25%] rounded-[14px] outline-none ${
+              hoveredNavItem === item.href ? "desktop-nav-hotspot-active" : ""
+            }`}
             style={{ left: item.left, width: item.width }}
           />
         ))}

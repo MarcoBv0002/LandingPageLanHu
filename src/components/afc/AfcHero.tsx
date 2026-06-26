@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AfcBrandMark } from "@/components/afc/AfcBrandMark";
 import { afcSite } from "@/lib/afc";
 
 export function AfcHero() {
@@ -31,7 +30,16 @@ export function AfcHero() {
 
       <div className="relative mx-auto grid min-h-[690px] w-[min(1180px,calc(100%-32px))] place-items-center py-12 text-center md:min-h-[742px] lg:min-h-[682px]">
         <div className="mt-4 flex max-w-4xl flex-col items-center">
-          <AfcBrandMark size="lg" />
+          <div className="relative h-[210px] w-[min(82vw,320px)] md:h-[330px] md:w-[520px] lg:h-[380px] lg:w-[600px]">
+            <Image
+              src="/images/afc/afc-logo-floating.png"
+              alt="AFC - Apex Fighting Championship"
+              fill
+              priority
+              sizes="(max-width: 767px) 82vw, (max-width: 1023px) 520px, 600px"
+              className="object-contain drop-shadow-[0_28px_70px_rgba(0,0,0,0.82)]"
+            />
+          </div>
           <p className="mt-6 text-[0.8rem] font-black uppercase tracking-[0.26em] text-white/[0.86] md:mt-8 md:text-lg">
             Disciplina. Honor. Victoria.
           </p>
