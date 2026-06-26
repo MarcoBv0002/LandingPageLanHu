@@ -5,7 +5,7 @@ export const afcSite = {
   location: "Chincha Alta, Ica - Perú",
   contact: {
     phone: "+51 901 081 980",
-    email: "info@afc-peru.com",
+    email: "afcperu.ica@gmail.com",
     address: "Chincha Alta, Ica - Perú"
   }
 } as const;
@@ -22,9 +22,9 @@ export type ClassificationStatus = "classified" | "pending" | "notQualified";
 
 export const classificationEvents = [
   {
-    id: "afc-2025-torneo-1",
-    label: "AFC 2025 - Torneo 1",
-    date: "15 de Marzo, 2025",
+    id: "afc-2026-torneo-1",
+    label: "AFC 2026 - Torneo 1",
+    date: "15 de Marzo, 2026",
     athletes: [
       { position: 1, name: "Fabian Cardenas", discipline: "MMA", category: "-61 kg", status: "classified", points: 100 },
       { position: 2, name: "Alonso Ruiz", discipline: "Boxeo", category: "-67 kg", status: "classified", points: 85 },
@@ -33,9 +33,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-2",
-    label: "AFC 2025 - Torneo 2",
-    date: "17 de Mayo, 2025",
+    id: "afc-2026-torneo-2",
+    label: "AFC 2026 - Torneo 2",
+    date: "17 de Mayo, 2026",
     athletes: [
       { position: 1, name: "Renato Vera", discipline: "MMA", category: "-66 kg", status: "classified", points: 100 },
       { position: 2, name: "Nicolas Flores", discipline: "Jiu-Jitsu", category: "-70 kg", status: "classified", points: 85 },
@@ -44,9 +44,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-3",
-    label: "AFC 2025 - Torneo 3",
-    date: "26 de Julio, 2025",
+    id: "afc-2026-torneo-3",
+    label: "AFC 2026 - Torneo 3",
+    date: "26 de Julio, 2026",
     athletes: [
       { position: 1, name: "Diego Ramirez", discipline: "MMA", category: "-70 kg", status: "classified", points: 100 },
       { position: 2, name: "Bruno Salazar", discipline: "MMA", category: "-70 kg", status: "classified", points: 85 },
@@ -57,9 +57,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-4",
-    label: "AFC 2025 - Torneo 4",
-    date: "20 de Septiembre, 2025",
+    id: "afc-2026-torneo-4",
+    label: "AFC 2026 - Torneo 4",
+    date: "20 de Septiembre, 2026",
     athletes: [
       { position: 1, name: "Rodrigo Nieto", discipline: "MMA", category: "-66 kg", status: "pending", points: 0 },
       { position: 2, name: "Samuel Paz", discipline: "Jiu-Jitsu", category: "-94 kg", status: "pending", points: 0 },
@@ -67,9 +67,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-5",
-    label: "AFC 2025 - Torneo 5",
-    date: "25 de Octubre, 2025",
+    id: "afc-2026-torneo-5",
+    label: "AFC 2026 - Torneo 5",
+    date: "25 de Octubre, 2026",
     athletes: [
       { position: 1, name: "Mario Quispe", discipline: "Boxeo", category: "-69 kg", status: "pending", points: 0 },
       { position: 2, name: "Adrian Soto", discipline: "MMA", category: "-57 kg", status: "pending", points: 0 },
@@ -77,9 +77,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-6",
-    label: "AFC 2025 - Torneo 6",
-    date: "15 de Noviembre, 2025",
+    id: "afc-2026-torneo-6",
+    label: "AFC 2026 - Torneo 6",
+    date: "15 de Noviembre, 2026",
     athletes: [
       { position: 1, name: "Piero Castillo", discipline: "Jiu-Jitsu", category: "-82 kg", status: "pending", points: 0 },
       { position: 2, name: "Hugo Campos", discipline: "Sanda", category: "-68 kg", status: "pending", points: 0 },
@@ -87,9 +87,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-7",
-    label: "AFC 2025 - Torneo 7",
-    date: "13 de Diciembre, 2025",
+    id: "afc-2026-torneo-7",
+    label: "AFC 2026 - Torneo 7",
+    date: "13 de Diciembre, 2026",
     athletes: [
       { position: 1, name: "Andre Rojas", discipline: "MMA", category: "-70 kg", status: "pending", points: 0 },
       { position: 2, name: "Gael Rivera", discipline: "Boxeo", category: "-60 kg", status: "pending", points: 0 },
@@ -97,9 +97,9 @@ export const classificationEvents = [
     ]
   },
   {
-    id: "afc-2025-torneo-8",
-    label: "AFC 2025 - Torneo 8",
-    date: "20 de Diciembre, 2025",
+    id: "afc-2026-torneo-8",
+    label: "AFC 2026 - Torneo 8",
+    date: "20 de Diciembre, 2026",
     athletes: [
       { position: 1, name: "Campeon Ranking A", discipline: "MMA", category: "-70 kg", status: "pending", points: 0 },
       { position: 2, name: "Campeon Ranking B", discipline: "Boxeo", category: "-67 kg", status: "pending", points: 0 },
@@ -137,9 +137,9 @@ export const categoryRules = [
     discipline: "Jiu-Jitsu",
     icon: "gi",
     gender: "Masculino",
-    weightsList: ["64 kg", "70 kg", "76 kg", "+76 kg"],
-    weights: "-64 kg, -70 kg, -76 kg, -82.3 kg, -88.3 kg, -94.3 kg, +94.3 kg",
-    rules: "Reglas IBJJF. Sin kimono (No-Gi)."
+    weightsList: ["-65 kg", "-75 kg", "-85 kg", "+85 kg"],
+    weights: "-65 kg, -75 kg, -85 kg, +85 kg",
+    rules: "5 minutos de combate. Solo sometimiento, sin puntaje."
   },
   {
     discipline: "Sanda",
@@ -151,13 +151,60 @@ export const categoryRules = [
   }
 ] as const;
 
+export const jiuJitsuRulesDetail = {
+  discipline: "Jiu-Jitsu",
+  title: "Detalle competitivo Jiu-Jitsu No-Gi",
+  categories: ["-65 kg", "-75 kg", "-85 kg", "+85 kg"],
+  format: "5 minutos de combate",
+  summary: "No habrá puntaje: el combate se define por sometimiento.",
+  notes: [
+    "Cada categoría tendrá sus propias reglas según el grado o experiencia de los competidores.",
+    "Si nadie gana por sometimiento durante los 5 minutos, se otorgarán 2 minutos adicionales.",
+    "En el tiempo adicional se evaluará la agresividad y quién busca el combate, sin importar la posición final.",
+    "La decisión será tomada por el referee o juez del combate.",
+    "Los ganadores pasarán al ranking de la AFC, sumando victorias, derrotas o empates."
+  ]
+} as const;
+
+export const upcomingDisciplineDetail = {
+  title: "Reglamento próximamente",
+  summary:
+    "Esta disciplina se publicará cuando AFC confirme categorías, formato y criterios oficiales.",
+  note: "Síguenos en nuestras redes para estar al día."
+} as const;
+
+export const afcPaymentInfo = {
+  title: "Pagos e inscripciones",
+  email: "afcperu.ica@gmail.com",
+  accounts: [
+    {
+      bank: "BCP",
+      label: "Cuenta BCP Soles",
+      number: "31500201658092",
+      color: "bcp"
+    },
+    {
+      bank: "BCP",
+      label: "Cuenta interbancaria",
+      number: "00231510020165809205",
+      color: "bcp"
+    },
+    {
+      bank: "Interbank",
+      label: "Cuenta Simple Soles",
+      number: "898 3205113926",
+      color: "interbank"
+    }
+  ]
+} as const;
+
 export const tournamentDates = [
-  { event: "Torneo 1", date: "15 de Marzo, 2025", venue: "Chincha Alta, Perú", status: "Completado" },
-  { event: "Torneo 2", date: "17 de Mayo, 2025", venue: "Chincha Alta, Perú", status: "Completado" },
-  { event: "Torneo 3", date: "26 de Julio, 2025", venue: "Chincha Alta, Perú", status: "En curso", highlight: true },
-  { event: "Torneo 4", date: "20 de Septiembre, 2025", venue: "Chincha Alta, Perú", status: "Próximo" },
-  { event: "Torneo 5", date: "25 de Octubre, 2025", venue: "Chincha Alta, Perú", status: "Próximo" },
-  { event: "Torneo 6", date: "15 de Noviembre, 2025", venue: "Chincha Alta, Perú", status: "Próximo" },
-  { event: "Torneo 7", date: "13 de Diciembre, 2025", venue: "Chincha Alta, Perú", status: "Próximo" },
-  { event: "Torneo 8 (Gran Final)", date: "20 de Diciembre, 2025", venue: "Chincha Alta, Perú", status: "Próximo" }
+  { event: "Fecha 1", date: "22 AGO 2026", venue: "Chincha Alta, Perú", status: "PRÓXIMA", highlight: true },
+  { event: "Fecha 2", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" },
+  { event: "Fecha 3", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" },
+  { event: "Fecha 4", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" },
+  { event: "Fecha 5", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" },
+  { event: "Fecha 6", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" },
+  { event: "Fecha 7", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" },
+  { event: "Fecha 8", date: "2026", venue: "Chincha Alta, Perú", status: "SIN FECHA" }
 ] as const;

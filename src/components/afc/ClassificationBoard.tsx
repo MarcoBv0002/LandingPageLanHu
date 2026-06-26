@@ -61,7 +61,7 @@ export function ClassificationBoard() {
                 key={event.id}
                 type="button"
                 onClick={() => setSelectedId(event.id)}
-                className={`h-12 rounded-md border px-3 text-xs font-black uppercase transition focus:outline-none focus:ring-2 focus:ring-afc-red ${
+                className={`afc-row-lift h-12 rounded-md border px-3 text-xs font-black uppercase focus:outline-none focus:ring-2 focus:ring-afc-red ${
                   isActive
                     ? "border-afc-red bg-afc-red text-white shadow-[0_16px_36px_rgba(211,32,46,0.24)]"
                     : "border-white/[0.12] bg-white/[0.035] text-white/[0.68] hover:border-afc-red/[0.60] hover:text-white"
@@ -92,7 +92,7 @@ export function ClassificationBoard() {
           </span>
         </label>
 
-        <div className="mt-7 hidden overflow-x-auto rounded-lg border border-white/[0.14] bg-black/[0.18] text-left shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:block">
+        <div className="afc-panel-depth mt-7 hidden overflow-x-auto rounded-lg border border-white/[0.14] bg-black/[0.18] text-left shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:block">
           <table className="w-full min-w-[780px] border-collapse text-left">
             <thead className="bg-white/[0.08] text-xs font-black uppercase text-white/[0.82]">
               <tr>
@@ -141,7 +141,7 @@ export function ClassificationBoard() {
           {selectedEvent.athletes.map((athlete) => (
             <article
               key={`${selectedEvent.id}-${athlete.name}-mobile`}
-              className="grid grid-cols-[40px_1fr_auto] items-center gap-3 rounded-lg border border-white/10 bg-white/[0.035] p-4 text-left"
+              className="afc-row-lift grid grid-cols-[40px_1fr_auto] items-center gap-3 rounded-lg border border-white/10 bg-white/[0.035] p-4 text-left"
             >
               <span className="grid h-9 w-9 place-items-center rounded-md bg-white/[0.06] text-lg font-black">
                 {athlete.position}
@@ -163,7 +163,7 @@ export function ClassificationBoard() {
 
         <a
           href="#fechas"
-          className="mx-auto mt-6 inline-flex h-12 min-w-[280px] items-center justify-center rounded-md border border-afc-red px-6 text-xs font-black uppercase tracking-[0.08em] text-white transition hover:bg-afc-red hover:shadow-[0_18px_40px_rgba(211,32,46,0.26)] focus:outline-none focus:ring-2 focus:ring-afc-red"
+          className="afc-row-lift mx-auto mt-6 inline-flex h-12 min-w-[280px] items-center justify-center rounded-md border border-afc-red px-6 text-xs font-black uppercase tracking-[0.08em] text-white hover:bg-afc-red hover:shadow-[0_18px_40px_rgba(211,32,46,0.26)] focus:outline-none focus:ring-2 focus:ring-afc-red"
         >
           Ver todas las clasificaciones
         </a>

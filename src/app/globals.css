@@ -161,6 +161,127 @@ a {
   animation: hero-scroll-dot 1.75s ease-in-out infinite;
 }
 
+.afc-hero-bg-motion {
+  animation: afc-hero-bg-motion 18s ease-in-out infinite alternate;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+.afc-light-breathe {
+  animation: afc-light-breathe 4.8s ease-in-out infinite;
+}
+
+.afc-hero-logo-stage {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.afc-hero-logo-float {
+  animation:
+    afc-float-3d 5.8s ease-in-out infinite,
+    afc-logo-glow 3.4s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform, filter;
+}
+
+.afc-hero-logo-float::before {
+  position: absolute;
+  inset: 15% 11%;
+  content: "";
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(211, 32, 46, 0.32), transparent 65%);
+  filter: blur(26px);
+  opacity: 0.72;
+  transform: translateZ(-40px);
+}
+
+.afc-rise-in {
+  animation: afc-rise-in 760ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+  animation-delay: var(--afc-delay, 0ms);
+}
+
+.afc-tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition:
+    transform 360ms cubic-bezier(0.2, 0.75, 0.2, 1),
+    border-color 260ms ease,
+    box-shadow 360ms ease,
+    background-color 260ms ease;
+}
+
+.afc-tilt-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.14) 18%,
+      transparent 34%
+    );
+  opacity: 0;
+  transform: translateX(-140%);
+  transition:
+    opacity 260ms ease,
+    transform 620ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.afc-tilt-card:hover,
+.afc-tilt-card:focus-visible {
+  transform: perspective(900px) rotateX(4deg) rotateY(-5deg) translateY(-8px)
+    translateZ(0);
+}
+
+.afc-tilt-card:hover::after,
+.afc-tilt-card:focus-visible::after {
+  opacity: 1;
+  transform: translateX(130%);
+}
+
+.afc-panel-depth {
+  transform-style: preserve-3d;
+  transition:
+    transform 420ms cubic-bezier(0.2, 0.75, 0.2, 1),
+    box-shadow 420ms ease,
+    border-color 320ms ease;
+}
+
+.afc-panel-depth:hover {
+  transform: perspective(1300px) rotateX(1.5deg) rotateY(-1.8deg)
+    translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 44px 110px rgba(0, 0, 0, 0.46),
+    0 0 70px rgba(211, 32, 46, 0.08);
+}
+
+.afc-emblem-float {
+  animation: afc-emblem-float 4.6s ease-in-out infinite;
+}
+
+.afc-modal-pop {
+  animation: afc-modal-pop 360ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+.afc-row-lift {
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.75, 0.2, 1),
+    border-color 240ms ease,
+    background-color 240ms ease,
+    box-shadow 260ms ease;
+}
+
+.afc-row-lift:hover,
+.afc-row-lift:focus-within {
+  transform: translateX(6px) translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.26);
+}
+
 @keyframes hero-scroll-dot {
   0%,
   100% {
@@ -171,6 +292,90 @@ a {
   50% {
     transform: translateY(14px);
     opacity: 0.45;
+  }
+}
+
+@keyframes afc-hero-bg-motion {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    filter: saturate(1) brightness(1);
+  }
+
+  100% {
+    transform: scale(1.045) translate3d(0, -10px, 0);
+    filter: saturate(1.13) brightness(1.07);
+  }
+}
+
+@keyframes afc-light-breathe {
+  0%,
+  100% {
+    opacity: 0.78;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.045);
+  }
+}
+
+@keyframes afc-float-3d {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 32px) rotateX(2.4deg) rotateY(-2.2deg);
+  }
+}
+
+@keyframes afc-logo-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 28px 70px rgba(0, 0, 0, 0.82))
+      drop-shadow(0 0 0 rgba(211, 32, 46, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 34px 78px rgba(0, 0, 0, 0.9))
+      drop-shadow(0 0 28px rgba(211, 32, 46, 0.32));
+  }
+}
+
+@keyframes afc-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes afc-emblem-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.025);
+  }
+}
+
+@keyframes afc-modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -213,5 +418,13 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .afc-tilt-card:hover,
+  .afc-tilt-card:focus-visible,
+  .afc-panel-depth:hover,
+  .afc-row-lift:hover,
+  .afc-row-lift:focus-within {
+    transform: none !important;
   }
 }
