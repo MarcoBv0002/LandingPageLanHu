@@ -153,7 +153,7 @@ export const categoryRules = [
 
 export const jiuJitsuRulesDetail = {
   discipline: "Jiu-Jitsu",
-  title: "Detalle competitivo Jiu-Jitsu No-Gi",
+  title: "Detalle competitivo Jiu-Jitsu Gi y No-Gi",
   categories: ["-65 kg", "-75 kg", "-85 kg", "+85 kg"],
   format: "5 minutos de combate",
   summary: "No habrá puntaje: el combate se define por sometimiento.",
