@@ -35,6 +35,7 @@ export function HeroSection() {
         sizes="(min-width: 1024px) 100vw, 0px"
         className="hidden object-cover object-top lg:block"
       />
+      <div className="tigre-hero-soft-bottom pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[118px] bg-[linear-gradient(180deg,rgba(1,5,14,0)_0%,rgba(1,5,14,0.28)_46%,rgba(1,5,14,0.78)_100%)] lg:h-[190px] lg:bg-[linear-gradient(180deg,rgba(1,5,14,0)_0%,rgba(1,5,14,0.22)_42%,rgba(1,5,14,0.72)_100%)]" />
 
       <div className="sr-only">
         <h1 id="hero-title">

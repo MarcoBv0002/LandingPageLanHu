@@ -44,6 +44,7 @@ export function AboutSection() {
       <div className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-black/42 via-black/12 to-transparent lg:hidden" />
       <div className="absolute inset-0 hidden bg-[radial-gradient(circle_at_52%_40%,rgba(4,31,89,0.1),transparent_31%),linear-gradient(90deg,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.04)_46%,rgba(0,0,0,0.08)_100%)] lg:block" />
       <div className="absolute inset-y-0 left-0 hidden w-[54%] bg-gradient-to-r from-black/38 via-black/14 to-transparent lg:block" />
+      <div className="tigre-about-soft-top pointer-events-none absolute inset-x-0 top-0 z-[2] h-[118px] bg-[linear-gradient(180deg,rgba(1,5,14,0.72)_0%,rgba(1,5,14,0.38)_42%,rgba(1,5,14,0)_100%)] lg:h-[190px] lg:bg-[linear-gradient(180deg,rgba(1,5,14,0.68)_0%,rgba(1,5,14,0.3)_45%,rgba(1,5,14,0)_100%)]" />
 
       <h2 id="about-section-title" className="sr-only">
         Mas que una academia, somos una familia.
