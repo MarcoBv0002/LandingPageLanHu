@@ -247,6 +247,19 @@ a {
   transform: scaleX(1);
 }
 
+.tigre-mobile-fixed-header::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.36) 58%,
+    transparent 100%
+  );
+}
+
 .tigre-mobile-logo-copy {
   width: max-content;
   transform: scaleX(0.7);
@@ -257,6 +270,26 @@ a {
   width: max-content;
   transform: scaleX(0.76);
   transform-origin: left center;
+}
+
+.tigre-about-heading {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.055em;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.58);
+}
+
+.tigre-about-condensed {
+  transform: scaleX(0.72);
+  transform-origin: left center;
+}
+
+.tigre-ragged-word img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 7px 14px rgba(0, 36, 140, 0.34));
 }
 
 .tigre-menu-summary {

@@ -50,6 +50,48 @@ export const heroContent = {
   ]
 } as const;
 
+export const aboutContent = {
+  eyebrow: "¿QUIENES SOMOS?",
+  headline: {
+    desktopLead: "MÁS QUE UNA ACADEMIA,",
+    mobileLead: ["MÁS QUE UNA", "ACADEMIA,", "SOMOS UNA"],
+    bridge: "SOMOS UNA",
+    accent: "FAMILIA."
+  },
+  paragraphs: [
+    {
+      text: "En Tigre Azul formamos personas a través de las artes marciales. Enseñamos disciplina, respeto y perseverancia para que cada alumno supere sus límites dentro y fuera del tatami.",
+      strong: ["disciplina, respeto y perseverancia"]
+    },
+    {
+      text: "Nuestro compromiso es brindar entrenamiento de calidad en un ambiente seguro, donde niños, jóvenes y adultos desarrollen su mejor versión.",
+      strong: ["entrenamiento de calidad", "su mejor versión"]
+    }
+  ],
+  pillars: [
+    {
+      icon: "mission",
+      title: "MISIÓN",
+      description: "Formar personas íntegras a través de las artes marciales."
+    },
+    {
+      icon: "vision",
+      title: "VISIÓN",
+      description: "Ser la academia líder en formación marcial a nivel nacional."
+    },
+    {
+      icon: "values",
+      title: "VALORES",
+      description: "Disciplina, respeto, humildad, constancia y pasión."
+    },
+    {
+      icon: "community",
+      title: "COMUNIDAD",
+      description: "Un equipo unido que te impulsa a crecer cada día."
+    }
+  ]
+} as const;
+
 export const navItems = [
   {
     label: "Inicio",

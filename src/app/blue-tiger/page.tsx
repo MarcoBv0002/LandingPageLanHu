@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { AppShell } from "@/components/layout/AppShell";
+import { TigreMobileHeader } from "@/components/layout/TigreMobileHeader";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionAnchorTargets } from "@/components/sections/SectionAnchorTargets";
 
@@ -22,7 +24,9 @@ export const metadata: Metadata = {
 export default function BlueTigerPage() {
   return (
     <AppShell>
+      <TigreMobileHeader />
       <HeroSection />
+      <AboutSection />
       <SectionAnchorTargets />
     </AppShell>
   );

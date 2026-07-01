@@ -2,13 +2,17 @@ import { sectionNavItems } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 
 export function SectionAnchorTargets() {
+  const remainingSections = sectionNavItems.filter(
+    (item) => item.href !== "#quienes-somos"
+  );
+
   return (
     <section
       aria-label="Secciones de Tigre Azul"
       className="bg-brand-950 py-14 text-white md:py-20"
     >
       <Container className="border-y border-white/10">
-        {sectionNavItems.map((item, index) => (
+        {remainingSections.map((item, index) => (
           <section
             id={item.href.slice(1)}
             key={item.href}
