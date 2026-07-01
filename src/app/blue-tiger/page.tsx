@@ -6,7 +6,7 @@ import { SectionAnchorTargets } from "@/components/sections/SectionAnchorTargets
 export const metadata: Metadata = {
   title: "Tigre Azul | Academia de artes marciales",
   description:
-    "Academia Tigre Azul: boxeo, MMA, BJJ, Sanda y preparacion fisica para alumnos nuevos, familias y competidores.",
+    "Academia Tigre Azul: disciplina que transforma. Entrena mente, cuerpo y carácter con artes marciales.",
   icons: {
     icon: "/images/tigre-azul/tigre-azul-logo.png",
     apple: "/images/tigre-azul/tigre-azul-logo.png"
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tigre Azul | Academia de artes marciales",
     description:
-      "Disciplina, respeto, tecnica y preparacion fisica en una academia de deportes de combate.",
-    images: ["/images/tigre-azul/tigre-azul-final-desktop.png"]
+      "Disciplina que transforma. Entrena mente, cuerpo y carácter en una academia de artes marciales.",
+    images: ["/images/tigre-azul/tigre-azul-fighter-clean.png"]
   }
 };
 

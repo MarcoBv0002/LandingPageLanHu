@@ -15,18 +15,17 @@ export const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${en
 )}`;
 
 export const heroContent = {
-  eyebrow: "Disciplina · Respeto · Honor · Superación",
+  eyebrow: "Academia de artes marciales",
   headline: {
-    lead: ["La actitud", "se entrena."],
-    accent: ["El carácter", "se forja."]
+    lead: ["Disciplina", "que"],
+    accent: ["transforma"]
   },
-  body:
-    "Formamos personas íntegras a través de las artes marciales. Cuerpo fuerte, mente clara, espíritu indomable.",
-  mobileBody: "Artes marciales para niños, jóvenes y adultos.",
+  body: "Entrena mente, cuerpo y carácter.",
+  mobileBody: "Entrena mente, cuerpo y carácter.",
   disciplines: "Boxeo · MMA · BJJ · Sanda · Fitness",
   primaryCta: {
     mobileLabel: "Reserva tu clase",
-    desktopLabel: "Únete ahora"
+    desktopLabel: "Reserva tu clase"
   },
   videoCta: {
     label: "Ver video",
