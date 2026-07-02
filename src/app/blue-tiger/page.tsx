@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AppShell } from "@/components/layout/AppShell";
 import { TigreMobileHeader } from "@/components/layout/TigreMobileHeader";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { DisciplinesSection } from "@/components/sections/DisciplinesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SectionAnchorTargets } from "@/components/sections/SectionAnchorTargets";
 
@@ -27,6 +28,7 @@ export default function BlueTigerPage() {
       <TigreMobileHeader />
       <HeroSection />
       <AboutSection />
+      <DisciplinesSection />
       <SectionAnchorTargets />
     </AppShell>
   );

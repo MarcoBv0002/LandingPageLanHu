@@ -1,14 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { heroContent, siteConfig, whatsappUrl } from "@/lib/site";
-
-const desktopNavItems = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#quienes-somos", label: "Sobre nosotros" },
-  { href: "#disciplinas", label: "Programas" },
-  { href: "#sedes", label: "Sedes" },
-  { href: "#contacto", label: "Contacto" }
-] as const;
+import { heroContent, navItems, siteConfig, whatsappUrl } from "@/lib/site";
 
 export function HeroSection() {
   return (
@@ -106,15 +98,50 @@ export function HeroSection() {
               aria-label="Navegación principal"
               className="flex items-start gap-[clamp(18px,2.1vw,42px)]"
             >
-              {desktopNavItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="tigre-desktop-nav-link relative whitespace-nowrap pb-[5px] text-[12px] font-black uppercase tracking-[0.18em] text-white outline-none transition hover:text-[#2f8fff] focus-visible:text-[#2f8fff] xl:text-[13px]"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                "subItems" in item ? (
+                  <div
+                    key={item.href}
+                    className="group relative -mb-[14px] pb-[14px]"
+                  >
+                    <a
+                      href={item.href}
+                      className="tigre-desktop-nav-link relative block whitespace-nowrap pb-[5px] text-[12px] font-black uppercase tracking-[0.18em] text-white outline-none transition hover:text-[#2f8fff] focus-visible:text-[#2f8fff] xl:text-[13px]"
+                    >
+                      {item.label}
+                    </a>
+                    <div className="pointer-events-none invisible absolute left-1/2 top-full z-50 w-[min(300px,82vw)] -translate-x-1/2 translate-y-2 rounded-[12px] border border-[#0b65ff]/45 bg-[#020813]/[0.96] p-2 opacity-0 shadow-[0_24px_70px_rgba(0,0,0,0.56),0_0_34px_rgba(0,98,255,0.18)] backdrop-blur-xl transition duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                      <span className="absolute -top-2 left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 border-l border-t border-[#0b65ff]/45 bg-[#020813]/[0.96]" />
+                      <div className="relative space-y-1">
+                        {item.subItems.map((subItem) => (
+                          <a
+                            key={subItem.href}
+                            href={subItem.href}
+                            className="block rounded-[9px] px-3 py-2.5 text-[11px] font-black uppercase tracking-[0.14em] text-white/86 outline-none transition hover:bg-[#0b65ff]/14 hover:text-[#2f8fff] focus-visible:bg-[#0b65ff]/14 focus-visible:text-[#2f8fff]"
+                          >
+                            <span className="flex items-center justify-between gap-3">
+                              <span>{subItem.label}</span>
+                              {"principal" in subItem && subItem.principal ? (
+                                <span className="rounded-full border border-[#0b65ff]/50 px-2 py-0.5 text-[8px] tracking-[0.08em] text-[#7fb0ff]">
+                                  Principal
+                                </span>
+                              ) : null}
+                            </span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="tigre-desktop-nav-link relative whitespace-nowrap pb-[5px] text-[12px] font-black uppercase tracking-[0.18em] text-white outline-none transition hover:text-[#2f8fff] focus-visible:text-[#2f8fff] xl:text-[13px]"
+                  >
+                    {item.label}
+                  </a>
+                )
+              )}
             </nav>
             <a
               href={whatsappUrl}

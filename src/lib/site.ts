@@ -92,28 +92,158 @@ export const aboutContent = {
   ]
 } as const;
 
-export const navItems = [
+export const disciplinesContent = {
+  eyebrow: "Nuestras disciplinas",
+  headline: {
+    lead: "Entrena. Evoluciona.",
+    accent: "Transforma",
+    tail: "tu vida."
+  },
+  body: "Descubre nuestras disciplinas y encuentra tu camino.",
+  cards: [
+    {
+      icon: "boxing",
+      title: "BOXEO",
+      image: "/images/tigre-azul/disciplines/boxeo.png",
+      details: [
+        {
+          icon: "shield",
+          title: "Descripción",
+          description: "Mejora tu técnica, resistencia y confianza."
+        },
+        {
+          icon: "pulse",
+          title: "Beneficios",
+          description: "Fuerza, reflejos, disciplina y control mental."
+        },
+        {
+          icon: "levels",
+          title: "Niveles",
+          description: "Principiante, Intermedio y Avanzado."
+        },
+        {
+          icon: "training",
+          title: "Entrenamiento",
+          description: "Recreativo y competitivo."
+        }
+      ]
+    },
+    {
+      icon: "mma",
+      title: "MMA",
+      image: "/images/tigre-azul/disciplines/mma.png",
+      details: [
+        {
+          icon: "shield",
+          title: "Descripción",
+          description: "Arte marcial mixto que combina lo mejor de varias disciplinas."
+        },
+        {
+          icon: "target",
+          title: "Preparación integral",
+          description: "Desarrolla striking, grappling, resistencia y estrategia."
+        },
+        {
+          icon: "levels",
+          title: "Niveles",
+          description: "Principiante, Intermedio y Avanzado."
+        }
+      ]
+    },
+    {
+      icon: "bjj",
+      title: "JIU-JITSU BRASILEÑO",
+      image: "/images/tigre-azul/disciplines/jiu-jitsu.png",
+      details: [
+        {
+          icon: "system",
+          title: "Sistema de graduación",
+          description: "Método por cinturones que reconoce tu progreso."
+        },
+        {
+          icon: "target",
+          title: "Gi / No Gi",
+          description: "Entrena con kimono o sin kimono, adaptado a tu estilo."
+        },
+        {
+          icon: "training",
+          title: "Competencia",
+          description: "Participa en torneos locales, nacionales e internacionales."
+        }
+      ]
+    },
+    {
+      icon: "sanda",
+      title: "SANDA WUSHU",
+      image: "/images/tigre-azul/disciplines/sanda.png",
+      details: [
+        {
+          icon: "history",
+          title: "Historia",
+          description: "Disciplina de origen chino que combina técnica y tradición."
+        },
+        {
+          icon: "rules",
+          title: "Sistema competitivo",
+          description: "Reglas claras, combates dinámicos y seguros."
+        },
+        {
+          icon: "trophy",
+          title: "Logros",
+          description: "Formamos atletas con mentalidad de campeón."
+        }
+      ]
+    },
+    {
+      icon: "fitness",
+      title: "PREPARACIÓN FÍSICA / GIMNASIO",
+      image: "/images/tigre-azul/disciplines/preparacion-fisica.png",
+      details: [
+        {
+          icon: "conditioning",
+          title: "Acondicionamiento",
+          description: "Mejora tu resistencia cardiovascular y movilidad."
+        },
+        {
+          icon: "strength",
+          title: "Fuerza",
+          description: "Aumenta tu fuerza funcional y masa muscular."
+        },
+        {
+          icon: "performance",
+          title: "Rendimiento",
+          description: "Entrenamiento diseñado para llevar tu cuerpo al máximo."
+        }
+      ]
+    }
+  ]
+} as const;
+
+export const locationSubNavItems = [
   {
-    label: "Inicio",
-    shortLabel: "Inicio",
-    href: "#inicio",
-    primary: true
+    label: "Chincha",
+    shortLabel: "Chincha",
+    href: "#sede-chincha",
+    principal: true,
+    description: "Sede principal en Jirón Colón 715, Chincha Alta."
   },
   {
-    label: "Quiénes somos",
-    shortLabel: "Quiénes somos",
+    label: "Pisco",
+    shortLabel: "Pisco",
+    href: "#sede-pisco",
+    principal: false,
+    description: "Sede Pisco con referencia a espaldas del tecnológico."
+  }
+] as const;
+
+export const aboutSubNavItems = [
+  {
+    label: "¿Quiénes somos?",
+    shortLabel: "¿Quiénes somos?",
     href: "#quienes-somos",
-    primary: false,
-    description:
-      "Historia, origen, evolución y filosofía de formación Tigre Azul."
-  },
-  {
-    label: "Nuestras disciplinas",
-    shortLabel: "Disciplinas",
-    href: "#disciplinas",
     primary: true,
     description:
-      "Boxeo, MMA, Jiu-Jitsu Brasileño, Sanda Wushu y preparación física."
+      "Historia, origen, evolución y filosofía de formación Tigre Azul."
   },
   {
     label: "Profesores",
@@ -124,44 +254,12 @@ export const navItems = [
       "Equipo técnico, especialidades, grados, experiencia y certificaciones."
   },
   {
-    label: "Sedes oficiales",
-    shortLabel: "Sedes",
-    href: "#sedes",
-    primary: true,
-    description:
-      "Direcciones, horarios, disciplinas disponibles e instructores responsables."
-  },
-  {
-    label: "Árbol de aprendizaje",
-    shortLabel: "Árbol",
-    href: "#arbol-aprendizaje",
-    primary: false,
-    description:
-      "Ruta del alumno desde la primera clase hasta nivel avanzado, competencia o instructor."
-  },
-  {
-    label: "Equipo competitivo",
-    shortLabel: "Equipo",
-    href: "#equipo-competitivo",
-    primary: false,
-    description:
-      "Competidores actuales, campeones, categorías, medallas y preparación atlética."
-  },
-  {
     label: "Eventos y trayectoria",
     shortLabel: "Eventos",
     href: "#eventos-trayectoria",
     primary: false,
     description:
       "Campeonatos, seminarios, exhibiciones, participaciones y memoria histórica."
-  },
-  {
-    label: "Convenios",
-    shortLabel: "Convenios",
-    href: "#convenios",
-    primary: false,
-    description:
-      "Afiliaciones deportivas, alianzas institucionales y respaldos oficiales."
   },
   {
     label: "Salón de la fama",
@@ -180,20 +278,61 @@ export const navItems = [
       "Entrenamientos, competencias, niños, adultos, profesores y comunidad."
   },
   {
-    label: "Blog",
-    shortLabel: "Blog",
-    href: "#blog",
+    label: "Convenios",
+    shortLabel: "Convenios",
+    href: "#convenios",
     primary: false,
     description:
-      "Artículos sobre beneficios, cómo empezar, disciplinas y preparación para competir."
+      "Afiliaciones deportivas, alianzas institucionales y respaldos oficiales."
+  }
+] as const;
+
+export const programSubNavItems = [
+  {
+    label: "Disciplinas",
+    shortLabel: "Disciplinas",
+    href: "#disciplinas",
+    primary: true,
+    description:
+      "Boxeo, MMA, Jiu-Jitsu Brasileño, Sanda Wushu y preparación física."
   },
   {
-    label: "FAQ",
-    shortLabel: "FAQ",
-    href: "#faq",
+    label: "Árbol de aprendizaje",
+    shortLabel: "Árbol",
+    href: "#arbol-aprendizaje",
     primary: false,
     description:
-      "Respuestas sobre experiencia previa, edades, niveles, equipo y competencia."
+      "Ruta del alumno desde la primera clase hasta nivel avanzado, competencia o instructor."
+  }
+] as const;
+
+export const navItems = [
+  {
+    label: "Inicio",
+    shortLabel: "Inicio",
+    href: "#inicio",
+    primary: true
+  },
+  {
+    label: "Nosotros",
+    shortLabel: "Nosotros",
+    href: "#quienes-somos",
+    primary: true,
+    subItems: aboutSubNavItems
+  },
+  {
+    label: "Programas",
+    shortLabel: "Programas",
+    href: "#disciplinas",
+    primary: true,
+    subItems: programSubNavItems
+  },
+  {
+    label: "Sedes",
+    shortLabel: "Sedes",
+    href: "#sedes",
+    primary: true,
+    subItems: locationSubNavItems
   },
   {
     label: "Contacto",
@@ -203,6 +342,16 @@ export const navItems = [
   }
 ] as const;
 
-export const sectionNavItems = navItems.filter(
-  (item) => item.href !== "#inicio" && item.href !== "#contacto"
-);
+export const sectionNavItems = [
+  ...aboutSubNavItems,
+  ...programSubNavItems,
+  {
+    label: "Sedes oficiales",
+    shortLabel: "Sedes",
+    href: "#sedes",
+    primary: true,
+    description:
+      "Direcciones, horarios, disciplinas disponibles e instructores responsables.",
+    subItems: locationSubNavItems
+  }
+] as const;

@@ -292,6 +292,10 @@ a {
   filter: drop-shadow(0 7px 14px rgba(0, 36, 140, 0.34));
 }
 
+.tigre-disciplines-heading {
+  transform-origin: center;
+}
+
 .tigre-menu-summary {
   list-style: none;
 }
@@ -596,6 +600,14 @@ a {
 @media (min-width: 1280px) {
   .header-shell.container-shell {
     width: min(1360px, calc(100% - 72px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .tigre-disciplines-heading {
+    width: max-content;
+    max-width: 128%;
+    transform: scaleX(0.78);
   }
 }
 

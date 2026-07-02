@@ -19,7 +19,7 @@ export function AboutSection() {
   return (
     <section
       id="quienes-somos"
-      className="relative isolate overflow-hidden bg-[#01050e] text-white lg:min-h-[100svh]"
+      className="relative isolate overflow-hidden bg-[#01050e] text-white lg:h-[100svh]"
       aria-labelledby="about-section-title"
     >
       <div className="absolute inset-x-0 top-0 h-[112vw] lg:hidden">
@@ -75,18 +75,18 @@ export function AboutSection() {
         <AboutPillars variant="mobile" />
       </div>
 
-      <div className="relative z-10 hidden min-h-[100svh] lg:block">
+      <div className="relative z-10 hidden h-[100svh] items-center lg:flex">
         <div
-          className="tigre-rise-in absolute left-[5.85vw] top-[13.75vh] w-[54vw] max-w-[840px]"
+          className="tigre-rise-in ml-[5.85vw] w-[54vw] max-w-[780px]"
           style={{ "--tigre-delay": "90ms" } as CSSProperties}
         >
           <AboutEyebrow variant="desktop" />
 
-          <div className="mt-[clamp(38px,4.6vh,52px)]">
+          <div className="mt-[clamp(18px,2.7vh,30px)]">
             <AboutDesktopHeadline />
           </div>
 
-          <div className="mt-[clamp(28px,3.5vh,38px)] max-w-[730px] space-y-[clamp(20px,2.9vh,30px)] text-[clamp(16px,1.16vw,20px)] leading-[1.72] tracking-[0.01em] text-white/90">
+          <div className="mt-[clamp(16px,2.3vh,24px)] max-w-[690px] space-y-[clamp(12px,1.7vh,18px)] text-[clamp(14px,1vw,17px)] leading-[1.54] tracking-[0.01em] text-white/90">
             {aboutContent.paragraphs.map((paragraph) => (
               <p key={paragraph.text}>
                 {renderStrongText(paragraph.text, paragraph.strong)}
@@ -117,7 +117,7 @@ function AboutEyebrow({ variant }: { variant: "mobile" | "desktop" }) {
         className={
           variant === "mobile"
             ? "mt-[3.15vw] block h-[2px] w-[clamp(32px,8.15vw,76px)] bg-[#087cff] shadow-[0_0_18px_rgba(8,124,255,0.8)]"
-            : "mt-[clamp(24px,3.2vh,34px)] block h-[2px] w-[clamp(72px,5.25vw,86px)] bg-[#087cff] shadow-[0_0_18px_rgba(8,124,255,0.8)]"
+            : "mt-[clamp(12px,1.8vh,20px)] block h-[2px] w-[clamp(58px,4.4vw,78px)] bg-[#087cff] shadow-[0_0_18px_rgba(8,124,255,0.8)]"
         }
       />
     </div>
@@ -128,7 +128,7 @@ function AboutDesktopHeadline() {
   return (
     <p
       aria-hidden="true"
-      className="tigre-about-heading text-[clamp(50px,4.22vw,70px)] leading-[1.18] text-white"
+      className="tigre-about-heading text-[clamp(40px,3.55vw,62px)] leading-[1.1] text-white"
     >
       <span className="tigre-about-condensed block whitespace-nowrap">
         {aboutContent.headline.desktopLead}
@@ -137,7 +137,7 @@ function AboutDesktopHeadline() {
         <span className="tigre-about-condensed inline-block">
           {aboutContent.headline.bridge}
         </span>
-        <RaggedFamilyWord className="ml-[clamp(12px,1.1vw,20px)] inline-block w-[clamp(250px,19.5vw,330px)] align-[-0.2em]" />
+        <RaggedFamilyWord className="ml-[clamp(10px,1vw,18px)] inline-block w-[clamp(205px,16.5vw,292px)] align-[-0.2em]" />
       </span>
     </p>
   );
@@ -177,7 +177,7 @@ function RaggedFamilyWord({ className = "" }: { className?: string }) {
 function AboutPillars({ variant }: { variant: "mobile" | "desktop" }) {
   if (variant === "desktop") {
     return (
-      <div className="mt-[clamp(42px,5.2vh,58px)] grid w-[min(52vw,820px)] grid-cols-4 rounded-[14px] border border-[#0b72ff]/90 bg-[#03122d]/70 px-[clamp(16px,1.6vw,26px)] py-[clamp(24px,3.7vh,36px)] shadow-[0_18px_70px_rgba(0,38,126,0.25)] backdrop-blur-[2px]">
+      <div className="mt-[clamp(20px,2.8vh,32px)] grid w-[min(52vw,780px)] grid-cols-4 rounded-[12px] border border-[#0b72ff]/90 bg-[#03122d]/70 px-[clamp(12px,1.15vw,20px)] py-[clamp(14px,2vh,22px)] shadow-[0_18px_70px_rgba(0,38,126,0.25)] backdrop-blur-[2px]">
         {aboutContent.pillars.map((pillar, index) => (
           <PillarItem
             key={pillar.title}
@@ -218,15 +218,15 @@ function PillarItem({
   if (variant === "desktop") {
     return (
       <article
-        className={`flex min-h-[150px] flex-col items-center justify-start px-[clamp(14px,1.25vw,22px)] text-center text-white ${
+        className={`flex min-h-[112px] flex-col items-center justify-start px-[clamp(10px,1vw,16px)] text-center text-white ${
           index > 0 ? "border-l border-[#0b72ff]/85" : ""
         }`}
       >
-        <Icon className="h-[clamp(52px,4.2vw,70px)] w-[clamp(52px,4.2vw,70px)] text-[#087cff]" />
-        <h3 className="mt-[clamp(18px,2.2vh,24px)] text-[clamp(15px,1.15vw,19px)] font-black uppercase tracking-normal">
+        <Icon className="h-[clamp(38px,3vw,54px)] w-[clamp(38px,3vw,54px)] text-[#087cff]" />
+        <h3 className="mt-[clamp(10px,1.35vh,16px)] text-[clamp(13px,0.98vw,17px)] font-black uppercase tracking-normal">
           {pillar.title}
         </h3>
-        <p className="mt-[clamp(10px,1.25vh,14px)] max-w-[145px] text-[clamp(12px,0.9vw,15px)] leading-[1.55] text-white/90">
+        <p className="mt-[clamp(5px,0.8vh,9px)] max-w-[135px] text-[clamp(10px,0.78vw,13px)] leading-[1.35] text-white/90">
           {pillar.description}
         </p>
       </article>
