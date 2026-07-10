@@ -339,6 +339,207 @@ a {
   transform-origin: center;
 }
 
+.tigre-gallery-title {
+  width: max-content;
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7f9fb 30%,
+    #aeb7c2 58%,
+    #ffffff 75%,
+    #7e8996 100%
+  );
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 7px 20px rgba(0, 0, 0, 0.72));
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  transform: scaleX(0.9);
+  transform-origin: left center;
+}
+
+.tigre-hall-title {
+  width: max-content;
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f6f8fb 28%,
+    #a9b3bf 57%,
+    #ffffff 73%,
+    #73808e 100%
+  );
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 7px 22px rgba(0, 0, 0, 0.76));
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.035em;
+  transform: scaleX(0.9);
+  transform-origin: left center;
+}
+
+.tigre-hall-feature-name,
+.tigre-hall-stat {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.035em;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.68);
+}
+
+.tigre-hall-feature {
+  animation: tigre-hall-feature-in 520ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+.tigre-hall-details {
+  animation: tigre-hall-details-in 420ms 80ms cubic-bezier(0.2, 0.75, 0.2, 1)
+    both;
+}
+
+.tigre-hall-member {
+  transition:
+    color 220ms ease,
+    background 220ms ease,
+    padding-left 280ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.tigre-hall-member:hover {
+  padding-left: 8px;
+  background: linear-gradient(90deg, rgba(8, 124, 255, 0.07), transparent 72%);
+}
+
+@supports (animation-timeline: view()) {
+  .tigre-hall-reveal {
+    animation: tigre-hall-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 4% cover 30%;
+  }
+}
+
+@keyframes tigre-hall-feature-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.992);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tigre-hall-details-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tigre-hall-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tigre-gallery-media {
+  transition:
+    border-color 260ms ease,
+    box-shadow 360ms ease,
+    transform 360ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.tigre-gallery-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    112deg,
+    transparent 0%,
+    rgba(117, 178, 255, 0.13) 18%,
+    transparent 34%
+  );
+  opacity: 0;
+  transform: translateX(-35%);
+  transition:
+    opacity 320ms ease,
+    transform 560ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.tigre-gallery-media:hover,
+.tigre-gallery-media:focus-visible {
+  z-index: 2;
+  border-color: rgba(8, 124, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(0, 24, 78, 0.42);
+}
+
+.tigre-gallery-media:hover::after,
+.tigre-gallery-media:focus-visible::after {
+  opacity: 1;
+  transform: translateX(35%);
+}
+
+.tigre-gallery-viewer {
+  animation: tigre-gallery-viewer-in 220ms ease-out both;
+}
+
+.tigre-gallery-viewer-image {
+  animation: tigre-gallery-image-in 360ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+
+@supports (animation-timeline: view()) {
+  .tigre-gallery-reveal {
+    animation: tigre-gallery-reveal linear both;
+    animation-delay: var(--gallery-delay, 0ms);
+    animation-timeline: view();
+    animation-range: entry 4% cover 32%;
+  }
+}
+
+@keyframes tigre-gallery-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tigre-gallery-viewer-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tigre-gallery-image-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .tigre-professor-name {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
     sans-serif;

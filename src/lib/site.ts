@@ -326,14 +326,6 @@ export const aboutSubNavItems = [
       "Equipo técnico, especialidades, grados, experiencia y certificaciones."
   },
   {
-    label: "Eventos y trayectoria",
-    shortLabel: "Eventos",
-    href: "#eventos-trayectoria",
-    primary: false,
-    description:
-      "Campeonatos, seminarios, exhibiciones, participaciones y memoria histórica."
-  },
-  {
     label: "Salón de la fama",
     shortLabel: "Fama",
     href: "#salon-fama",
@@ -348,14 +340,6 @@ export const aboutSubNavItems = [
     primary: false,
     description:
       "Entrenamientos, competencias, niños, adultos, profesores y comunidad."
-  },
-  {
-    label: "Convenios",
-    shortLabel: "Convenios",
-    href: "#convenios",
-    primary: false,
-    description:
-      "Afiliaciones deportivas, alianzas institucionales y respaldos oficiales."
   }
 ] as const;
 
@@ -367,14 +351,6 @@ export const programSubNavItems = [
     primary: true,
     description:
       "Boxeo, MMA, Jiu-Jitsu Brasileño, Sanda Wushu y preparación física."
-  },
-  {
-    label: "Árbol de aprendizaje",
-    shortLabel: "Árbol",
-    href: "#arbol-aprendizaje",
-    primary: false,
-    description:
-      "Ruta del alumno desde la primera clase hasta nivel avanzado, competencia o instructor."
   }
 ] as const;
 

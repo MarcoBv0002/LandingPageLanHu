@@ -3,9 +3,10 @@ import { AppShell } from "@/components/layout/AppShell";
 import { TigreMobileHeader } from "@/components/layout/TigreMobileHeader";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { DisciplinesSection } from "@/components/sections/DisciplinesSection";
+import { GallerySection } from "@/components/sections/GallerySection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { HallOfFameSection } from "@/components/sections/HallOfFameSection";
 import { ProfessorsSection } from "@/components/sections/ProfessorsSection";
-import { SectionAnchorTargets } from "@/components/sections/SectionAnchorTargets";
 
 export const metadata: Metadata = {
   title: "Tigre Azul | Academia de artes marciales",
@@ -31,7 +32,8 @@ export default function BlueTigerPage() {
       <AboutSection />
       <DisciplinesSection />
       <ProfessorsSection />
-      <SectionAnchorTargets />
+      <HallOfFameSection />
+      <GallerySection />
     </AppShell>
   );
 }
