@@ -317,6 +317,110 @@ a {
   transform-origin: left center;
 }
 
+.tigre-professors-title {
+  width: max-content;
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f7fa 32%,
+    #aeb6bf 58%,
+    #ffffff 73%,
+    #7d8792 100%
+  );
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 7px 18px rgba(0, 0, 0, 0.72));
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.035em;
+  transform: scaleX(0.88);
+  transform-origin: center;
+}
+
+.tigre-professor-name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.045em;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+}
+
+.tigre-professors-grain {
+  background-image:
+    repeating-linear-gradient(
+      112deg,
+      rgba(255, 255, 255, 0.012) 0,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      27deg,
+      rgba(8, 124, 255, 0.014) 0,
+      rgba(8, 124, 255, 0.014) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+}
+
+.tigre-professors-tab {
+  transition:
+    color 180ms ease,
+    background 240ms ease,
+    box-shadow 240ms ease,
+    transform 180ms ease;
+}
+
+.tigre-professors-tab:active {
+  transform: scale(0.985);
+}
+
+.tigre-professor-card {
+  animation: tigre-professor-card-in 620ms cubic-bezier(0.2, 0.75, 0.2, 1)
+    both;
+  animation-delay: var(--professor-delay, 0ms);
+  transition:
+    transform 360ms cubic-bezier(0.2, 0.75, 0.2, 1),
+    border-color 260ms ease,
+    box-shadow 360ms ease;
+}
+
+.tigre-professor-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    118deg,
+    transparent 0%,
+    rgba(92, 160, 255, 0.07) 18%,
+    transparent 35%
+  );
+  opacity: 0;
+  transform: translateX(-130%);
+  transition:
+    opacity 280ms ease,
+    transform 720ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.tigre-professor-card:hover,
+.tigre-professor-card:focus-within {
+  border-color: rgba(8, 124, 255, 0.68);
+  box-shadow:
+    0 36px 88px rgba(0, 0, 0, 0.48),
+    0 0 42px rgba(8, 124, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transform: translateY(-7px);
+}
+
+.tigre-professor-card:hover::after,
+.tigre-professor-card:focus-within::after {
+  opacity: 1;
+  transform: translateX(130%);
+}
+
 .tigre-mobile-cta {
   font-size: clamp(9px, min(2.65vw, 1.55svh), 18px);
   line-height: 1.2;
@@ -603,11 +707,209 @@ a {
   }
 }
 
+@keyframes tigre-professor-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @media (min-width: 1024px) {
   .tigre-disciplines-heading {
     width: max-content;
     max-width: 128%;
     transform: scaleX(0.78);
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 1100px) {
+  .tigre-professors-section {
+    height: 100svh;
+    min-height: 640px;
+    padding-top: clamp(14px, 2.2vh, 24px);
+    padding-bottom: clamp(14px, 2.2vh, 24px);
+  }
+
+  .tigre-professors-content {
+    height: 100%;
+    justify-content: center;
+  }
+
+  .tigre-professors-kicker {
+    gap: clamp(8px, 1vh, 12px);
+    font-size: clamp(9px, 1.3vh, 12px);
+    line-height: 1;
+  }
+
+  .tigre-professors-title {
+    margin-top: clamp(3px, 0.7vh, 7px);
+    font-size: clamp(54px, 9.6vh, 94px);
+    line-height: 0.88;
+  }
+
+  .tigre-professors-divider {
+    max-width: 380px;
+    margin-top: clamp(6px, 0.9vh, 10px);
+    gap: clamp(8px, 1vh, 12px);
+  }
+
+  .tigre-professors-divider svg {
+    width: clamp(21px, 3.1vh, 29px);
+    height: clamp(21px, 3.1vh, 29px);
+  }
+
+  .tigre-professors-intro {
+    max-width: 620px;
+    margin-top: clamp(5px, 0.85vh, 9px);
+    font-size: clamp(11px, 1.55vh, 14px);
+    line-height: 1.35;
+  }
+
+  .tigre-professors-tabs {
+    max-width: 560px;
+    margin-top: clamp(8px, 1.3vh, 14px);
+  }
+
+  .tigre-professors-tab {
+    min-height: clamp(40px, 5.8vh, 48px);
+    gap: 8px;
+    font-size: clamp(10px, 1.5vh, 13px);
+  }
+
+  .tigre-professors-tab svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tigre-professors-grid {
+    margin-top: clamp(12px, 1.7vh, 18px);
+    gap: clamp(9px, 1vw, 14px);
+  }
+
+  .tigre-professor-card {
+    padding: clamp(10px, 1.4vh, 14px);
+    border-radius: 12px;
+  }
+
+  .tigre-professor-overview {
+    grid-template-columns: 30% 1fr;
+    gap: clamp(8px, 1vw, 12px);
+  }
+
+  .tigre-professor-portrait {
+    border-radius: 6px;
+  }
+
+  .tigre-professor-summary {
+    padding-top: clamp(2px, 0.5vh, 5px);
+  }
+
+  .tigre-professor-role {
+    font-size: clamp(7.5px, 1.2vh, 10px);
+  }
+
+  .tigre-professor-name {
+    margin-top: 3px;
+    font-size: clamp(20px, 3.6vh, 30px);
+    line-height: 0.94;
+  }
+
+  .tigre-professor-age,
+  .tigre-professor-disciplines {
+    gap: 5px;
+    font-size: clamp(9px, 1.3vh, 11.5px);
+  }
+
+  .tigre-professor-age {
+    margin-top: clamp(5px, 0.9vh, 9px);
+  }
+
+  .tigre-professor-disciplines {
+    margin-top: 4px;
+  }
+
+  .tigre-professor-age > svg,
+  .tigre-professor-disciplines > svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .tigre-professor-disciplines > div > div {
+    gap: 3px;
+    margin-top: 3px;
+  }
+
+  .tigre-professor-disciplines span {
+    padding: 2px 5px;
+    font-size: 7px;
+  }
+
+  .tigre-professor-details {
+    margin-top: clamp(7px, 1.1vh, 11px);
+    padding-top: clamp(7px, 1.1vh, 11px);
+  }
+
+  .tigre-professor-info-title {
+    gap: 5px;
+    font-size: clamp(9px, 1.4vh, 12px);
+  }
+
+  .tigre-professor-info-title svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .tigre-professor-credential-copy {
+    padding-left: 22px;
+    margin-top: 2px;
+    font-size: clamp(8.5px, 1.2vh, 10.5px);
+    line-height: 1.25;
+  }
+
+  .tigre-professor-certifications,
+  .tigre-professor-focus {
+    margin-top: clamp(5px, 0.8vh, 8px);
+    padding-top: clamp(5px, 0.8vh, 8px);
+  }
+
+  .tigre-professor-certification-list {
+    padding-left: 22px;
+    margin-top: 3px;
+    font-size: clamp(7.5px, 1.15vh, 10px);
+    line-height: 1.3;
+  }
+
+  .tigre-professor-certification-list > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1px;
+  }
+
+  .tigre-professor-certification-list li {
+    padding-left: 9px;
+  }
+
+  .tigre-professor-focus-copy {
+    padding-left: 22px;
+    margin-top: 3px;
+    font-size: clamp(8px, 1.15vh, 10px);
+    line-height: 1.3;
+  }
+
+  .tigre-professors-assurance {
+    gap: 8px;
+    margin-top: clamp(7px, 1.1vh, 12px);
+    font-size: clamp(9px, 1.3vh, 11px);
+    line-height: 1.35;
+  }
+
+  .tigre-professors-assurance > span,
+  .tigre-professors-assurance svg {
+    width: 26px;
+    height: 26px;
   }
 }
 

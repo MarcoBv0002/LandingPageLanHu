@@ -219,6 +219,78 @@ export const disciplinesContent = {
   ]
 } as const;
 
+export const professorsContent = {
+  eyebrow: "Equipo técnico",
+  headline: "Profesores",
+  body:
+    "Conoce a nuestro equipo técnico: especialistas en artes marciales, sus grados, trayectoria, experiencia y certificaciones.",
+  assurance:
+    "Todos nuestros instructores cuentan con experiencia comprobada, formación continua y un compromiso total con tu desarrollo.",
+  locations: [
+    {
+      id: "chincha",
+      label: "Chincha principal"
+    },
+    {
+      id: "pisco",
+      label: "Pisco"
+    }
+  ],
+  profiles: [
+    {
+      id: "cristian-gutierrez",
+      name: "Cristian Gutiérrez",
+      role: "Instructor",
+      age: 34,
+      image: "/images/tigre-azul/professors/cristian-gutierrez.webp",
+      locations: ["chincha", "pisco"],
+      disciplines: ["BJJ", "MMA", "Defensa personal"],
+      grade: ["Cinturón Negro", "BJJ (1er Dan)"],
+      trajectory: "14 años de experiencia",
+      certifications: [
+        "Black Belt BJJ — IBJJF",
+        "Instructor de Defensa Personal — Krav Maga Federation",
+        "Entrenador de MMA — Nivel 1 (FAMM)"
+      ],
+      focus: "Técnica, disciplina y control bajo presión."
+    },
+    {
+      id: "paola-vargas",
+      name: "Paola Vargas",
+      role: "Instructora",
+      age: 29,
+      image: "/images/tigre-azul/professors/paola-vargas.webp",
+      locations: ["chincha", "pisco"],
+      disciplines: ["BJJ", "Judo", "Defensa personal"],
+      grade: ["Cinturón Marrón", "BJJ"],
+      trajectory: "9 años de experiencia",
+      certifications: [
+        "Brown Belt BJJ — CBJJE",
+        "Instructora de Judo — FIJ",
+        "Certificación en Defensa Personal — Women Safety"
+      ],
+      focus: "Técnica, confianza y empoderamiento."
+    },
+    {
+      id: "diego-ramos",
+      name: "Diego Ramos",
+      role: "Instructor",
+      age: 31,
+      image: "/images/tigre-azul/professors/diego-ramos.webp",
+      locations: ["chincha", "pisco"],
+      disciplines: ["Muay Thai", "MMA", "Acondicionamiento"],
+      grade: ["Cinturón Negro", "Muay Thai"],
+      trajectory: "11 años de experiencia",
+      certifications: [
+        "Muay Thai — Kru Nivel Avanzado",
+        "Entrenador de MMA — Level 2 (FAMM)",
+        "Entrenamiento Funcional — ISSA"
+      ],
+      focus: "Potencia, resistencia y mentalidad ganadora."
+    }
+  ]
+} as const;
+
 export const locationSubNavItems = [
   {
     label: "Chincha",

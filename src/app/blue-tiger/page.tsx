@@ -4,6 +4,7 @@ import { TigreMobileHeader } from "@/components/layout/TigreMobileHeader";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { DisciplinesSection } from "@/components/sections/DisciplinesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ProfessorsSection } from "@/components/sections/ProfessorsSection";
 import { SectionAnchorTargets } from "@/components/sections/SectionAnchorTargets";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function BlueTigerPage() {
       <HeroSection />
       <AboutSection />
       <DisciplinesSection />
+      <ProfessorsSection />
       <SectionAnchorTargets />
     </AppShell>
   );

@@ -3,7 +3,10 @@ import { Container } from "@/components/ui/Container";
 
 export function SectionAnchorTargets() {
   const remainingSections = sectionNavItems.filter(
-    (item) => item.href !== "#quienes-somos" && item.href !== "#disciplinas"
+    (item) =>
+      item.href !== "#quienes-somos" &&
+      item.href !== "#disciplinas" &&
+      item.href !== "#profesores"
   );
 
   return (
